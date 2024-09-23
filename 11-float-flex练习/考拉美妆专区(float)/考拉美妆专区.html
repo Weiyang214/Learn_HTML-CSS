@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>考拉海购</title>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <style>
+    body {
+      background-color: #f2f2f2;
+    }
+    .makeup .header {
+      height: 74px;
+      line-height: 32px;
+      font-size: 14px;
+    }
+    .makeup .header .header-left {
+      float: left;
+    }
+    .makeup .header-left .title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #333;
+    }
+    .makeup .header-left .search {
+      height: 32px;
+      /* line-height: 32px; */
+      margin: 0 14px;
+      display: inline-block;
+    }
+    .makeup .header-left .search span {
+      color: #999;
+      margin-right: 14px;
+    }
+    .makeup .header-left .search .sort {
+      color: #666;
+      margin-right: 24px;
+    }
+    .makeup .header-left .search .sort:hover {
+      text-decoration: underline;
+    }
+    .makeup .header-left .search .sort:visited {
+      color: #ff080f;
+    }
+    
+    .header .header-right.more {
+      color: #999;
+      font-size: 14px;
+      float: right;
+    }
+    .header .header-right.more:hover {
+      text-decoration: underline;
+    }
+
+
+
+    .content ul li {
+      height: 541px;
+      background-color: #fff;
+      float: left;
+      border: 1px solid #e9e9e9;
+    }
+    .content ul li a {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+    }
+    /* 左边部分 */
+    .content ul li.item-l {
+      width: 329px;
+      border-right: none;
+    }
+    /* 中间部分 */
+    .content ul li.item-c {
+      width: 551px;
+      border: none;
+    }
+    .content ul li.item-c .itemc {
+      width: 276px;
+      height: 271px;
+      border: 1px solid #e9e9e9;
+      float: left;
+    }
+    /* 中间层叠边框调整 */
+    /* 上下合并 */
+    .content ul li .item4,.item5 {
+      margin-top: -1px;
+      width: 270px;
+    }
+    /* 左右合并 */
+    .content ul li .item3,.item5 {
+      margin-left: -1px;
+      width: 275px;
+    }
+    /* 右边部分 */
+    .content ul li.item-r {
+      width: 220px;
+      border-left: none;
+      border-bottom: none;
+    }
+    .content ul li.item-r .itemr {
+      width: 220px;
+      height: 120px;
+      border-bottom: 1px solid #e9e9e9;
+    } 
+    .content ul li.item-r .s-title {
+      height: 60px;
+    }
+  </style>
+</head>
+<body>
+  <div class="makeup allwrapper">
+    <div class="header">
+      <div class="header-left">
+        <span class="title">美妆专区</span>
+        <div class="search">
+          <span class="searchkey">热搜词：</span>
+          <a class="sort" href="#">面膜</a>
+          <a class="sort" href="#">口红</a>
+          <a class="sort" href="#">眼霜</a>
+          <a class="sort" href="#">精华</a>
+          <a class="sort" href="#">卸妆</a>
+        </div>
+      </div>
+      <a href="#" class="header-right more">更多好货&gt;</a>
+    </div>
+    <div class="content">
+      <ul>
+        <li class="item item-l item1"><a href="#"></a></li>
+        <li class="item item-c">
+          <div class="itemc item2"><a href="#"></a></div>
+          <div class="itemc item3"><a href="#"></a></div>
+          <div class="itemc item4"><a href="#"></a></div>
+          <div class="itemc item5"><a href="#"></a></div>
+        </li>
+        <li class="item item-r">
+          <div class="itemr s-title"></div>
+          <div class="itemr item7"><a href="#"></a></div>
+          <div class="itemr item8"><a href="#"></a></div>
+          <div class="itemr item9"><a href="#"></a></div>
+          <div class="itemr item10"><a href="#"></a></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>main</title>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/header.css">
+
+  <link rel="stylesheet" href="./css/main-right.css">
+
+  <style>
+    .area {
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid #d3d3d3;
+      border-width: 0 1px;
+      background-image: url(./image/wrap1.png);
+    }
+
+    .area-left {
+      width: 729px;
+      padding: 20px 20px 40px;
+      /* 上左右下 */
+      box-sizing: border-box;
+    }
+
+    .recommend-section .list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: 20px 0 0 0;
+    }
+
+    .recommend-section>.list .item {
+      width: 140px;
+      margin-bottom: 30px;
+    }
+
+    .recommend-section>.list .item {
+      width: 140px;
+    }
+
+    .recommend-section>.list .top {
+      position: relative;
+      margin: 5px 0;
+    }
+
+    .recommend-section>.list .top .cover {
+      content: url("");
+      background-position: 0 0;
+      /* width不继承,%参考包含块 */
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .recommend-section>.list .info {
+      background-position: 0 -537px;
+      width: 140px;
+      height: 27px;
+      position: absolute;
+      bottom: 0;
+    }
+
+    .recommend-section>.list .info .headset {
+      margin: 8px 10px;
+    }
+
+    .recommend-section>.list .info .count {
+      color: #ccc;
+      font-size: 12px;
+      position: absolute;
+      top: 7px;
+      left: 28px;
+    }
+
+    .recommend-section>.list .info .video {
+      position: absolute;
+      top: 6px;
+      right: 10px;
+    }
+
+    .recommend-section>.list .info .video:hover {
+      content: url("");
+      background: url('./image/iconall.png') no-repeat 0 -60px;
+      width: 16px;
+      height: 17px;
+    }
+
+    .recommend-section>.list .bottom .dtjm {
+      position: relative;
+      top: 2px;
+      margin: 0 4px 0 0;
+    }
+
+    .recommend-section>.list .bottom .title {
+      font-size: 14px;
+      color: #000;
+    }
+
+    .recommend-section>.list .bottom .title:hover {
+      text-decoration: underline;
+    }
+
+    .disc-section .content {
+      height: 186px;
+      margin: 20px 0;
+      box-sizing: border-box;
+      border: 1px solid #d3d3d3;
+    }
+
+    .disc-section .content .inner {
+      position: relative;
+      height: 100%;
+      box-sizing: border-box;
+      padding: 0 27px;
+      border: 1px solid #fff;
+      background-color: #f5f5f5;
+    }
+
+    .disc-section .content .inner .control {
+      position: absolute;
+      width: 17px;
+      height: 17px;
+      top: 65px;
+      background-image: url(./image/index.png);
+    }
+
+    .disc-section .content .inner .control-left {
+      left: 4px;
+      background-position: -260px -75px;
+    }
+
+    .disc-section .content .inner .control-right {
+     right: 4px;
+     background-position: -300px -75px;
+    }
+
+    .disc-section .content .inner .control-left:hover {
+      background-position: -280px -75px;
+    }
+
+    .disc-section .content .inner .control-right:hover {
+      background-position: -320px -75px;
+    }
+
+    .disc-section .content .inner .roller {
+      display: flex;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .disc-section .content .inner .roller .list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      /* 不让它压缩 */
+      padding-top: 10px;
+      flex-shrink: 0;
+    }
+
+    .disc-section .roller .item {
+      width: 118px;
+      height: 150px;
+      background: url(./image/index.png) no-repeat -260px 100px;
+    }
+
+    .disc-section .roller .item .album {
+      position: relative;
+    }
+
+    .disc-section .roller .item .cover {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: url(./image/coverall.png) no-repeat 0 -570px;
+    }
+
+    .disc-section .roller .item .play {
+      display: none;
+      position: absolute;
+      right: 25px;
+      bottom: 5px;
+      width: 22px;
+      height: 22px;
+      background: url(./image/iconall.png) 0 -85px;
+    }
+
+    .disc-section .roller .item .album:hover .play {
+      display: block;
+    }
+
+    .disc-section .roller .item p {
+      margin-top: 5px;
+      padding-right: 12px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    .disc-section .roller .item p:hover {
+      text-decoration: underline;
+    }
+
+    .disc-section .roller .item .title {
+      color: #000;
+    }
+
+    .disc-section .roller .item .anchor {
+      color: #666;
+    }
+
+    /* rank-section */
+    .rank-section .content {
+      display: flex;
+      height: 472px;
+      background: url(./image/rank_bg.png) no-repeat;
+      margin: 20px 0;
+    }
+
+    .rank-section .content .rank {
+      width: 230px;
+    }
+
+    .rank-section .content .rank .head {
+      display: flex;
+      height: 120px;
+      box-sizing: border-box;
+      padding: 20px 0 0 20px;
+    }
+
+    .rank-section .content .rank .head .album {
+      position: relative;
+      width: 80px;
+      height: 80px;
+    }
+
+    .rank-section .rank .head .album img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .rank-section .rank .head .album .cover {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: url(./image/coverall.png) no-repeat -145px -57px;
+    }
+
+    .rank-section .rank .head .info {
+      margin: 6px 0 0 10px;
+    }
+
+    .rank-section .rank .head .info .title {
+      color: #333;
+    }
+
+    .rank-section .rank .head .info .title:hover {
+      text-decoration: underline;
+    }
+
+    .rank-section .rank .head .info .btn {
+      display: inline-block;
+      margin: 10px 10px 0 0;
+      width: 22px;
+      height: 22px;
+      background: url(./image/index.png) no-repeat;
+    }
+
+    .rank-section .rank .head .info .btn.play {
+      background-position: -267px -205px;
+    }
+
+    .rank-section .rank .head .info .btn.favor {
+      background-position: -300px -205px;
+    }
+
+    .rank-section .rank .head .info .btn.play:hover {
+      background-position: -267px -235px;
+    }
+
+    .rank-section .rank .head .info .btn.favor:hover {
+      background-position: -300px -235px;
+    }
+
+
+    .rank-section .rank .list .item {
+      display: flex;
+      height: 32px;
+      padding-left: 15px;
+      line-height: 32px;
+    }
+
+    .rank-section .rank .list .item .no {
+      width: 35px;
+      text-align: center;
+      font-size: 16px;
+      color:#666;
+    }
+
+    /* 前三变颜色 */
+    .rank-section .rank .list .item:nth-child(-n+3) .no {
+      color: #c10d0c;
+    }
+
+    .rank-section .rank .list .item .song {
+      /* 前面有宽度,后面固定宽度,这部分自动拉伸占据剩下的空间 */
+      flex: 1;
+      color: #000;
+      /* 超出部分展示...*/
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    .rank-section .rank .list .item .song:hover {
+      text-decoration: underline;
+    }
+
+    .rank-section .rank .list .item .operation {
+      /* 默认不展示 */
+      display: none;
+      /* display: flex; */
+      align-items: center;
+      width: 82px;
+    }
+
+    .rank-section .rank .list .item:hover .operation {
+      display: flex;
+    }
+
+    .rank-section .rank .list .item .operation .btn {
+      display: inline-block;
+      margin-right: 5px;
+      width: 17px;
+      height: 17px;
+      background: url(./image/index.png) no-repeat;
+    }
+
+    .rank-section .rank .list .item .operation .btn.play {
+      background-position: -267px -268px;
+    }
+
+    .rank-section .rank .list .item .operation .btn.add {
+      background-image: url(./image/icon.png);
+      background-position: 2px -698px;
+    }
+
+    .rank-section .rank .list .item .operation .btn.favor {
+      background-position: -297px -268px;
+      margin-right: 0;
+    }
+
+    .rank-section .rank .list .item .operation .btn.play:hover {
+      background-position: -267px -288px;
+    }
+
+    .rank-section .rank .list .item .operation .btn.add:hover {
+      background-position: -20px -698px;
+    }
+
+    .rank-section .rank .list .item .operation .btn.favor:hover {
+      background-position: -297px -288px;
+    }
+
+
+    .rank-section .rank .list .more {
+      display: block;
+      color: #000;
+      height: 32px;
+      line-height: 32px;
+      text-align: right;
+      padding-right: 32px;
+    }
+
+    .rank-section .rank .list .more:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <div class="area content_view">
+      <div class="area-left">
+        <div class="recommend-section">
+          <div class="header_type_02">
+            <div class="area-hleft">
+              <h2 class="title">热门推荐</h2>
+              <ul class="keyword">
+                <li class="item"><a href="#">华语</a></li>
+                <li class="line">|</li>
+                <li class="item"><a href="#">流行</a></li>
+                <li class="line">|</li>
+                <li class="item"><a href="#">摇滚</a></li>
+                <li class="line">|</li>
+                <li class="item"><a href="#">民谣</a></li>
+                <li class="line">|</li>
+                <li class="item"><a href="#">电子</a></li>
+              </ul>
+            </div>
+            <div class="area-hright">
+              <a href="#">更多</a>
+            </div>
+          </div>
+          <div class="list">
+            <div class="item">
+              <div class="top">
+                <a href="https://music.163.com/#/dj?id=2522586235">
+                  <img class="image" src="./image/songimage.jpg" alt="朴树">
+                  <div class="cover coverall_sprite">
+                  </div>
+                </a>
+                <div class="info coverall_sprite">
+                  <i class="iconall_sprite iconall_sprite_headset headset"></i>
+                  <span class="count">8362</span>
+                  <a href="">
+                    <i class="iconall_sprite iconall_sprite_video video"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="bottom">
+                <a href="https://music.163.com/#/dj?id=2522586235">
+                  <i class="icon_sprite icon_sprite_dtjm dtjm"></i>
+                  <span class="title">
+                    最近有些忙碌的朴树先生：他是少年，真诚的沧桑才年
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="top">
+                <a href="https://music.163.com/#/dj?id=2522586235">
+                  <img class="image" src="./image/songimage.jpg" alt="朴树">
+                  <div class="cover coverall_sprite">
+                  </div>
+                </a>
+                <div class="info coverall_sprite">
+                  <i class="iconall_sprite iconall_sprite_headset headset"></i>
+                  <span class="count">8362</span>
+                  <a href="">
+                    <i class="iconall_sprite iconall_sprite_video video"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="bottom">
+                <a href="https://music.163.com/#/dj?id=2522586235">
+                  <i class="icon_sprite icon_sprite_dtjm dtjm"></i>
+                  <span class="title">
+                    最近有些忙碌的朴树先生：他是少年，真诚的沧桑才年
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="top">
+                <a href="https://music.163.com/#/dj?id=2522586235">
+                  <img class="image" src="./image/songimage.jpg" alt="朴树">
+                  <div class="cover coverall_sprite">
+                  </div>
+                </a>
+                <div class="info coverall_sprite">
+                  <i class="iconall_sprite iconall_sprite_headset headset"></i>
+                  <span class="count">8362</span>
+                  <a href="">
+                    <i class="iconall_sprite iconall_sprite_video video"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="bottom">
+                <a href="https://music.163.com/#/dj?id=2522586235">
+                  <i class="icon_sprite icon_sprite_dtjm dtjm"></i>
+                  <span class="title">
+                    最近有些忙碌的朴树先生：他是少年，真诚的沧桑才年
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="top">
+                <a href="https://music.163.com/#/dj?id=2522586235">
+                  <img class="image" src="./image/songimage.jpg" alt="朴树">
+                  <div class="cover coverall_sprite">
+                  </div>
+                </a>
+                <div class="info coverall_sprite">
+                  <i class="iconall_sprite iconall_sprite_headset headset"></i>
+                  <span class="count">8362</span>
+                  <a href="">
+                    <i class="iconall_sprite iconall_sprite_video video"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="bottom">
+                <a href="https://music.163.com/#/dj?id=2522586235">
+                  <i class="icon_sprite icon_sprite_dtjm dtjm"></i>
+                  <span class="title">
+                    最近有些忙碌的朴树先生：他是少年，真诚的沧桑才年
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="top">
+                <a href="https://music.163.com/#/dj?id=2522586235">
+                  <img class="image" src="./image/songimage.jpg" alt="朴树">
+                  <div class="cover coverall_sprite">
+                  </div>
+                </a>
+                <div class="info coverall_sprite">
+                  <i class="iconall_sprite iconall_sprite_headset headset"></i>
+                  <span class="count">8362</span>
+                  <a href="">
+                    <i class="iconall_sprite iconall_sprite_video video"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="bottom">
+                <a href="https://music.163.com/#/dj?id=2522586235">
+                  <i class="icon_sprite icon_sprite_dtjm dtjm"></i>
+                  <span class="title">
+                    最近有些忙碌的朴树先生：他是少年，真诚的沧桑才年
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="top">
+                <a href="https://music.163.com/#/dj?id=2522586235">
+                  <img class="image" src="./image/songimage.jpg" alt="朴树">
+                  <div class="cover coverall_sprite">
+                  </div>
+                </a>
+                <div class="info coverall_sprite">
+                  <i class="iconall_sprite iconall_sprite_headset headset"></i>
+                  <span class="count">8362</span>
+                  <a href="">
+                    <i class="iconall_sprite iconall_sprite_video video"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="bottom">
+                <a href="https://music.163.com/#/dj?id=2522586235">
+                  <i class="icon_sprite icon_sprite_dtjm dtjm"></i>
+                  <span class="title">
+                    最近有些忙碌的朴树先生：他是少年，真诚的沧桑才年
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="top">
+                <a href="https://music.163.com/#/dj?id=2522586235">
+                  <img class="image" src="./image/songimage.jpg" alt="朴树">
+                  <div class="cover coverall_sprite">
+                  </div>
+                </a>
+                <div class="info coverall_sprite">
+                  <i class="iconall_sprite iconall_sprite_headset headset"></i>
+                  <span class="count">8362</span>
+                  <a href="">
+                    <i class="iconall_sprite iconall_sprite_video video"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="bottom">
+                <a href="https://music.163.com/#/dj?id=2522586235">
+                  <i class="icon_sprite icon_sprite_dtjm dtjm"></i>
+                  <span class="title">
+                    最近有些忙碌的朴树先生：他是少年，真诚的沧桑才年
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="item">
+              <div class="top">
+                <a href="https://music.163.com/#/dj?id=2522586235">
+                  <img class="image" src="./image/songimage.jpg" alt="朴树">
+                  <div class="cover coverall_sprite">
+                  </div>
+                </a>
+                <div class="info coverall_sprite">
+                  <i class="iconall_sprite iconall_sprite_headset headset"></i>
+                  <span class="count">8362</span>
+                  <a href="">
+                    <i class="iconall_sprite iconall_sprite_video video"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="bottom">
+                <a href="https://music.163.com/#/dj?id=2522586235">
+                  <i class="icon_sprite icon_sprite_dtjm dtjm"></i>
+                  <span class="title">
+                    最近有些忙碌的朴树先生：他是少年，真诚的沧桑才年
+                  </span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="disc-section">
+          <div class="header_type_02">
+            <div class="area-hleft">
+              <h2 class="title">新碟上架</h2>
+            </div>
+            <div class="area-hright">
+              <a href="#">更多</a>
+            </div>
+          </div>
+          <div class="content">
+            <div class="inner">
+              <div class="roller">
+                <ul class="list">
+                  <li class="item">
+                    <div class="album">
+                      <img src="./image/newdisc_album_01.jpg" alt="">
+                      <a class="cover"></a>
+                      <a class="play"></a>
+                    </div>
+                    <p><a class="title" href="">残夢</a></p>
+                    <p><a class="anchor" href="">Ado</a></p>
+                  </li>
+                  <li class="item">
+                    <div class="album">
+                      <img src="./image/newdisc_album_02.jpg" alt="">
+                      <a class="cover"></a>
+                      <a class="play"></a>
+                    </div>
+                    <p><a class="title" href="">成功之路摇滚歌剧原声带</a></p>
+                    <p><a class="anchor" href="">伍佰 & China Blue</a></p>
+                  </li>
+                  <li class="item">
+                    <div class="album">
+                      <img src="./image/newdisc_album_01.jpg" alt="">
+                      <a class="cover"></a>
+                      <a class="play"></a>
+                    </div>
+                    <p><a class="title" href="">残夢</a></p>
+                    <p><a class="anchor" href="">Ado</a></p>
+                  </li>
+                  <li class="item">
+                    <div class="album">
+                      <img src="./image/newdisc_album_02.jpg" alt="">
+                      <a class="cover"></a>
+                      <a class="play"></a>
+                    </div>
+                    <p><a class="title" href="">成功之路摇滚歌剧原声带</a></p>
+                    <p><a class="anchor" href="">伍佰 & China Blue</a></p>
+                  </li>
+                  <li class="item">
+                    <div class="album">
+                      <img src="./image/newdisc_album_01.jpg" alt="">
+                      <a class="cover"></a>
+                      <a class="play"></a>
+                    </div>
+                    <p><a class="title" href="">残夢</a></p>
+                    <p><a class="anchor" href="">Ado</a></p>
+                  </li>
+                </ul>
+                <ul class="list">2</ul>
+                <ul class="list">3</ul>
+              </div>
+              <a href="" class="control control-left"></a>
+              <a href="" class="control control-right"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="rank-section">
+          <div class="header_type_02">
+            <div class="area-hleft">
+              <h2 class="title">榜单</h2>
+            </div>
+            <div class="area-hright">
+              <a href="#">更多</a>
+            </div>
+          </div>
+          <div class="content">
+            <!-- dl/dt/dd 定义列表 -->
+             <dl class="rank up-rank">
+              <dt class="head">
+                <div class="album">
+                  <img src="./image/up_rank.jpg" alt="飙升榜">
+                  <a href="" class="cover"></a>
+                </div>
+                <div class="info">
+                  <h3 class="title">飙升榜</h3>
+                  <div class="oper">
+                    <a href="" class="btn play"></a>
+                    <a href="" class="btn favor"></a>
+                  </div>
+                </div>
+                
+              </dt>
+              <dd class="list">
+                <ol>
+                  <li class="item">
+                    <span class="no">1</span>
+                    <a href="" class="song">何须借光 你就是光</a>
+                    <div class="operation">
+                      <a class="btn play" href=""></a>
+                      <a class="btn add" href=""></a>
+                      <a class="btn favor" href=""></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">2</span>
+                    <a href="" class="song">何须借光 你就是光</a>
+                    <div class="operation">
+                      <a class="btn play" href=""></a>
+                      <a class="btn add" href=""></a>
+                      <a class="btn favor" href=""></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">3</span>
+                    <a href="" class="song">何须借光 你就是光</a>
+                    <div class="operation">
+                      <a class="btn play" href=""></a>
+                      <a class="btn add" href=""></a>
+                      <a class="btn favor" href=""></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">4</span>
+                    <a href="" class="song">何须借光 你就是光</a>
+                    <div class="operation">
+                      <a class="btn play" href=""></a>
+                      <a class="btn add" href=""></a>
+                      <a class="btn favor" href=""></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">5</span>
+                    <a href="" class="song">何须借光 你就是光</a>
+                    <div class="operation">
+                      <a class="btn play" href=""></a>
+                      <a class="btn add" href=""></a>
+                      <a class="btn favor" href=""></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">6</span>
+                    <a href="" class="song">何须借光 你就是光</a>
+                    <div class="operation">
+                      <a class="btn play" href=""></a>
+                      <a class="btn add" href=""></a>
+                      <a class="btn favor" href=""></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">7</span>
+                    <a href="" class="song">何须借光 你就是光</a>
+                    <div class="operation">
+                      <a class="btn play" href=""></a>
+                      <a class="btn add" href=""></a>
+                      <a class="btn favor" href=""></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">8</span>
+                    <a href="" class="song">何须借光 你就是光</a>
+                    <div class="operation">
+                      <a class="btn play" href=""></a>
+                      <a class="btn add" href=""></a>
+                      <a class="btn favor" href=""></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">9</span>
+                    <a href="" class="song">何须借光 你就是光</a>
+                    <div class="operation">
+                      <a class="btn play" href=""></a>
+                      <a class="btn add" href=""></a>
+                      <a class="btn favor" href=""></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">10</span>
+                    <a href="" class="song">何须借光 你就是光</a>
+                    <div class="operation">
+                      <a class="btn play" href=""></a>
+                      <a class="btn add" href=""></a>
+                      <a class="btn favor" href=""></a>
+                    </div>
+                  </li>
+                </ol>
+                <div>
+                  <a class='more' href="">查看更多&gt;</a>
+                </div>
+              </dd>
+             </dl>
+             <dl class="rank new-rank">
+              <dt class="head">
+                <div class="album">
+                  <img src="./image/new_rank.jpg" alt="新歌榜">
+                  <a href="" class="cover"></a>
+                </div>
+                <div class="info">
+                  <h3 class="title">新歌榜</h3>
+                  <div class="oper">
+                    <a href="" class="btn play"></a>
+                    <a href="" class="btn favor"></a>
+                  </div>
+                </div>
+                
+              </dt>
+              <dd class="list">
+                <ol>
+                  <li class="item">
+                    <span class="no">1</span>
+                    <a href="" class="song">何须借光 你就是光</a>
+                    <div class="operation">
+                      <a class="btn play" href=""></a>
+                      <a class="btn add" href=""></a>
+                      <a class="btn favor" href=""></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">2</span>
+                    <a href="" class="song">何须借光 你就是光</a>
+                    <div class="operation">
+                      <a class="btn play" href=""></a>
+                      <a class="btn add" href=""></a>
+                      <a class="btn favor" href=""></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">3</span>
+                    <a href="" class="song">何须借光 你就是光</a>
+                    <div class="operation">
+                      <a class="btn play" href=""></a>
+                      <a class="btn add" href=""></a>
+                      <a class="btn favor" href=""></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">4</span>
+                    <a href="" class="song">何须借光 你就是光</a>
+                    <div class="operation">
+                      <a class="btn play" href=""></a>
+                      <a class="btn add" href=""></a>
+                      <a class="btn favor" href=""></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">5</span>
+                    <a href="" class="song">何须借光 你就是光</a>
+                    <div class="operation">
+                      <a class="btn play" href=""></a>
+                      <a class="btn add" href=""></a>
+                      <a class="btn favor" href=""></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">6</span>
+                    <a href="" class="song">何须借光 你就是光</a>
+                    <div class="operation">
+                      <a class="btn play" href=""></a>
+                      <a class="btn add" href=""></a>
+                      <a class="btn favor" href=""></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">7</span>
+                    <a href="" class="song">何须借光 你就是光</a>
+                    <div class="operation">
+                      <a class="btn play" href=""></a>
+                      <a class="btn add" href=""></a>
+                      <a class="btn favor" href=""></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">8</span>
+                    <a href="" class="song">何须借光 你就是光</a>
+                    <div class="operation">
+                      <a class="btn play" href=""></a>
+                      <a class="btn add" href=""></a>
+                      <a class="btn favor" href=""></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">9</span>
+                    <a href="" class="song">何须借光 你就是光</a>
+                    <div class="operation">
+                      <a class="btn play" href=""></a>
+                      <a class="btn add" href=""></a>
+                      <a class="btn favor" href=""></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">10</span>
+                    <a href="" class="song">何须借光 你就是光</a>
+                    <div class="operation">
+                      <a class="btn play" href=""></a>
+                      <a class="btn add" href=""></a>
+                      <a class="btn favor" href=""></a>
+                    </div>
+                  </li>
+                </ol>
+                <div>
+                  <a class='more' href="">查看更多&gt;</a>
+                </div>
+              </dd>
+             </dl>
+             <dl class="rank origin-rank">
+              <dt class="head">
+                <div class="album">
+                  <img src="./image/origin_rank.jpg" alt="原创榜">
+                  <a href="" class="cover"></a>
+                </div>
+                <div class="info">
+                  <h3 class="title">原创榜</h3>
+                  <div class="oper">
+                    <a href="" class="btn play"></a>
+                    <a href="" class="btn favor"></a>
+                  </div>
+                </div>
+                
+              </dt>
+              <dd class="list">
+                <ol>
+                  <li class="item">
+                    <span class="no">1</span>
+                    <a href="" class="song">何须借光 你就是光</a>
+                    <div class="operation">
+                      <a class="btn play" href=""></a>
+                      <a class="btn add" href=""></a>
+                      <a class="btn favor" href=""></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">2</span>
+                    <a href="" class="song">何须借光 你就是光</a>
+                    <div class="operation">
+                      <a class="btn play" href=""></a>
+                      <a class="btn add" href=""></a>
+                      <a class="btn favor" href=""></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">3</span>
+                    <a href="" class="song">何须借光 你就是光</a>
+                    <div class="operation">
+                      <a class="btn play" href=""></a>
+                      <a class="btn add" href=""></a>
+                      <a class="btn favor" href=""></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">4</span>
+                    <a href="" class="song">何须借光 你就是光</a>
+                    <div class="operation">
+                      <a class="btn play" href=""></a>
+                      <a class="btn add" href=""></a>
+                      <a class="btn favor" href=""></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">5</span>
+                    <a href="" class="song">何须借光 你就是光</a>
+                    <div class="operation">
+                      <a class="btn play" href=""></a>
+                      <a class="btn add" href=""></a>
+                      <a class="btn favor" href=""></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">6</span>
+                    <a href="" class="song">何须借光 你就是光</a>
+                    <div class="operation">
+                      <a class="btn play" href=""></a>
+                      <a class="btn add" href=""></a>
+                      <a class="btn favor" href=""></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">7</span>
+                    <a href="" class="song">何须借光 你就是光</a>
+                    <div class="operation">
+                      <a class="btn play" href=""></a>
+                      <a class="btn add" href=""></a>
+                      <a class="btn favor" href=""></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">8</span>
+                    <a href="" class="song">何须借光 你就是光</a>
+                    <div class="operation">
+                      <a class="btn play" href=""></a>
+                      <a class="btn add" href=""></a>
+                      <a class="btn favor" href=""></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">9</span>
+                    <a href="" class="song">何须借光 你就是光</a>
+                    <div class="operation">
+                      <a class="btn play" href=""></a>
+                      <a class="btn add" href=""></a>
+                      <a class="btn favor" href=""></a>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <span class="no">10</span>
+                    <a href="" class="song">何须借光 你就是光</a>
+                    <div class="operation">
+                      <a class="btn play" href=""></a>
+                      <a class="btn add" href=""></a>
+                      <a class="btn favor" href=""></a>
+                    </div>
+                  </li>
+                </ol>
+                <div>
+                  <a class='more' href="">查看更多&gt;</a>
+                </div>
+              </dd>
+             </dl>
+          </div>
+        </div>
+
+        
+      </div>
+      <div class="area-right">
+        <div class="user-login">
+          <p class="desc">登录网易云音乐，可以享受无限收藏的乐趣，并且无限同步到手机</p>
+          <a href="#" class="btn">用户登录</a>
+        </div>
+        <div class="settle-singer">
+          <div class="header_type_01">
+            <h3 class="title">入驻歌手</h3>
+            <a href="#" class="more">查看全部 &gt;</a>
+          </div>
+          <ul class="list right_item">
+            <li>
+              <a class="item" href="#">
+                <div class="album">
+                  <img src="./image/singer-01.jpg" alt="">
+                </div>
+                <div class="info">
+                  <div class="singer">张惠妹aMEI</div>
+                  <div class="desc">台湾歌手张惠妹</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="item" href="#">
+                <div class="album">
+                  <img src="./image/singer-01.jpg" alt="">
+                </div>
+                <div class="info">
+                  <div class="singer">张惠妹aMEI</div>
+                  <div class="desc">台湾歌手张惠妹</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="item" href="#">
+                <div class="album">
+                  <img src="./image/singer-01.jpg" alt="">
+                </div>
+                <div class="info">
+                  <div class="singer">张惠妹aMEI</div>
+                  <div class="desc">台湾歌手张惠妹张惠妹张惠妹张惠妹</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="item" href="#">
+                <div class="album">
+                  <img src="./image/singer-01.jpg" alt="">
+                </div>
+                <div class="info">
+                  <div class="singer">张惠妹aMEI</div>
+                  <div class="desc">台湾歌手张惠妹</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="item" href="#">
+                <div class="album">
+                  <img src="./image/singer-01.jpg" alt="">
+                </div>
+                <div class="info">
+                  <div class="singer">张惠妹aMEI</div>
+                  <div class="desc">台湾歌手张惠妹</div>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <a href="#" class="apply btn_02 btn_type_01_sup">
+            <i class="btn_02 btn_type_01_sub">申请成为网易音乐人</i>
+          </a>
+        </div>
+        <div class="hot-anthor">
+          <div class="header_type_01">
+            <h3 class="title">热门主播</h3>
+          </div>
+          <ul class="list right_item">
+            <li>
+              <a href="#" class="item">
+                <div class="album">
+                  <img src="./image/anthor-01.jpg" alt="">
+                </div>
+                <div class="info">
+                  <div class="singer">陈立</div>
+                  <div class="desc">心理学家、美食家陈立教授坚守坚守</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="item">
+                <div class="album">
+                  <img src="./image/anthor-01.jpg" alt="">
+                </div>
+                <div class="info">
+                  <div class="singer">陈立</div>
+                  <div class="desc">心理学家、美食家陈立教授</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="item">
+                <div class="album">
+                  <img src="./image/anthor-01.jpg" alt="">
+                </div>
+                <div class="info">
+                  <div class="singer">陈立</div>
+                  <div class="desc">心理学家、美食家陈立教授</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="item">
+                <div class="album">
+                  <img src="./image/anthor-01.jpg" alt="">
+                </div>
+                <div class="info">
+                  <div class="singer">陈立</div>
+                  <div class="desc">心理学家、美食家陈立教授</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="item">
+                <div class="album">
+                  <img src="./image/anthor-01.jpg" alt="">
+                </div>
+                <div class="info">
+                  <div class="singer">陈立</div>
+                  <div class="desc">心理学家、美食家陈立教授</div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

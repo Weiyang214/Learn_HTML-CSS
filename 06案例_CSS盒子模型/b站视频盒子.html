@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bilibili</title>
+  <style>
+    div,p,span,a,img {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      color: inherit;
+    }
+    a{
+      display: block;
+    }
+    .item {
+      width: 268.64px;
+      height: 226.1px;
+      margin: 10px auto;
+    }
+    .album img {
+      width: 100%;
+      height: 151.1px;
+      border-radius: 6px;
+    }
+    .info a{
+      /* 块级元素无浮动无定位p的width可以继承 */
+      font:500 15px PingFang SC,HarmonyOS_Medium,Helvetica Neue,Microsoft YaHei,sans-serif;
+      color: #18191c;
+      margin: 5px 0;
+      /* 一行显示...nowrap inline-block的width默认atom包裹内容*/
+        /* 方法一:把父元素a设置display:block
+        方法二:给父元素a设置width和overflow:hidden */
+      /* white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; */
+      /* 多行显示... */
+        /* 自动加... */
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient:vertical;
+      overflow: hidden;
+      /* text-overflow: ellipsis; */
+    }
+    .info a:hover {
+      color: #00aeec;
+    }
+    /* up图标 */
+    .anchor::before {
+      content: url(css/up.svg);
+      position: relative;
+      top: 4px;
+      color: #888;
+    }
+    /* 作者信息 */
+    .info .anchor {
+      font: 400 13px PingFang SC,HarmonyOS_Medium,Helvetica Neue,Microsoft YaHei,sans-serif;
+      color:#888;
+      margin-top: 3px;
+    } 
+  </style>
+</head>
+
+<body>
+  <div class="item">
+    <div class="album">
+     <a href="https://www.bilibili.com/video/BV1qk4y1e7ng/?spm_id_from=333.1073.high_energy.content.click">
+      <img src="https://i2.hdslb.com/bfs/archive/018abaca27374ff21f9b15e0472b4457643d5dad.jpg@672w_378h_1c.avif" referrerpolicy="no-referrer" alt="picture">
+     </a>
+    </div>
+    <div class="info">
+      <a href="https://www.bilibili.com/video/BV1qk4y1e7ng/?spm_id_from=333.1073.high_energy.content.click&vd_source=2739a360e1bd5ef50510c76c8937152b">
+        <p>blender三渲二 oc独立自制动画 lose Control 原创meme 爆肝一星期的三年动画了属于是</p>
+      </a>
+      <a href="https://space.bilibili.com/631389?spm_id_from=333.1073.high_energy.content.click" class="anchor">
+        <span class="nickname">又脑zzZ</span><span class="time">&nbsp;·&nbsp;23小时前</span>
+      </a>
+    </div>
+  </div>
+</body>
+</html>

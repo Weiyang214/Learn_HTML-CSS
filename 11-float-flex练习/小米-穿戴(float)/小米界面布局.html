@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小米官网</title>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <style>
+    body {
+      background-color: #f5f5f5;
+    }
+
+    .header {
+      height: 58px;
+      line-height: 58px;
+    } 
+    .header .title {
+      color: #333;
+      font-size: 22px;
+      font-weight: 200;
+      float: left;
+    }
+    .header .allsort {
+      color: #424242;
+      font-size: 16px;
+      float: right;
+    }
+    .header .sort {
+      margin-left: 30px;
+      padding: 2.5px 0;
+    }
+
+    .header .sort:hover {
+      color: #ff6700;
+      border-bottom: 2px solid #ff6700;
+      cursor: pointer;
+    }
+    .content {
+      margin-left: -14px;
+    }
+    .content .item {
+      width: 234px;
+      height: 300px;
+      background-color: #fff;
+      float: left;
+      margin: 0 0 14px 14px;
+      /* 动画 */
+      /* 方法一 */
+      /* position: relative;
+      top: 0; */
+      transition: all .2s linear;
+    }
+    /* 点击动画 */
+    .content .item:hover {
+      box-shadow: 0 15px 30px rgb(0, 0, 0,.1);
+      /* 方法一 */
+      /* position: relative;
+      top: -5px; */
+      /* 方法二 */
+      transform: translateY(-3px);
+    }
+    .content .item a {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+    }
+    .content .item1 {
+      height: 614px;
+    }
+    .content .item9,.content .item10 {
+      height: 143px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="dress mi_wrapper">
+    <div class="header">
+      <span class="title">智能穿戴</span>
+      <div class="allsort">
+        <span class="sort ear">耳机</span>
+        <span class="sort wear">穿戴</span>
+      </div>
+    </div>
+    <div class="content">
+      <ul>     
+        <li class="item item1"><a href="#"></a></li>
+        <li class="item item2"><a href="#"></a></li>
+        <li class="item item3"><a href="#"></a></li>
+        <li class="item item4"><a href="#"></a></li>
+        <li class="item item5"><a href="#"></a></li>
+        <li class="item item6"><a href="#"></a></li>
+        <li class="item item7"><a href="#"></a></li>
+        <li class="item item8"><a href="#"></a></li>
+        <li class="item item9"><a href="#"></a></li>
+        <li class="item item10"><a href="#"></a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

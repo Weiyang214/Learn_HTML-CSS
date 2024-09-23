@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=.item, initial-scale=1.0">
+  <link rel="icon" href="http://s1.music.126.net/style/favicon.ico?v20180823">
+  <title>网易云歌单</title>
+  <style>
+  /* 重置 */
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+
+
+  .item {
+      width: 140px;
+      margin: 0 auto;
+    }
+  .top {
+	  position: relative;
+    margin: 5px 0;
+  }
+  img {
+    /* 将图片背景下多出的区域去除 */
+    /* vertical-align: top; */
+    display: block;
+  }
+  .top .cover {
+    content: url("");
+    background: url('./imgs/coverall.png') no-repeat 0 0;
+    /* width不继承,%参考包含块 */
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .info {
+    background: url('imgs/coverall.png') no-repeat 0 -537px;
+	  width: 140px;
+	  height: 27px;
+    position: absolute;
+    bottom: 0;
+  }
+  .info .headset {
+    display: inline-block;
+    content: url("");
+    background: url('./imgs/iconall.png') no-repeat 0 -24px;
+	  width: 14px;
+  	height: 11px;
+    margin: 8px 10px;
+  }
+  .info .count {
+    color: #ccc;
+    font-size: 12px;
+    position: absolute;
+    top: 7px;
+    left: 28px;
+  } 
+
+  .info .video {
+    display: inline-block;
+    content: url("");
+    background: url('imgs/iconall.png') no-repeat 0 0;
+	  width: 16px;
+  	height: 17px;
+    position: absolute; 
+    top: 6px;
+    right: 10px;
+  }
+  .info .video:hover {
+    content: url("");
+    background: url('imgs/iconall.png') no-repeat 0 -60px;
+	  width: 16px;
+	  height: 17px;
+  }
+  .bottom .dtjm {
+    content: url("");
+    background: url('imgs/icon.png') no-repeat -31px -658px;
+	  width: 35px;
+  	height: 15px;
+    position: relative;
+    top: 2px;
+    margin: 0 4px 0 0;
+  }
+  .bottom .title {
+    font-size: 14px;
+  }
+  .bottom .title:hover {
+    text-decoration: underline;
+  }
+  </style>
+</head>
+<body>
+  <div class="item">
+    <div class="top">
+      <a href="https://music.163.com/#/dj?id=2522586235">
+        <img class="image" src="./imgs/songimage.jpg" alt="朴树">
+        <div class="cover">
+        </div>
+      </a>
+      <div class="info">
+        <i class="headset"></i>
+        <span class="count">8362</span>
+        <a href="">
+          <i class="video"></i>
+        </a>
+      </div>
+    </div>
+    <div class="bottom">
+      <a href="https://music.163.com/#/dj?id=2522586235">
+        <i class="dtjm"></i>
+        <span class="title">
+          最近有些忙碌的朴树先生：他是少年，真诚的沧桑才年
+        </span>
+      </a>
+    </div>
+  </div>
+</body>
+</html>

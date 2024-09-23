@@ -1,0 +1,122 @@
+/* body */
+body {
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* 内容包裹区域 */
+.allview {
+  width: 1519px;
+}
+.top_view_1 {
+  width: 1100px;
+  margin: 0 auto;
+}
+.banner_view {
+  width: 982px;
+  margin: 0 auto;
+}
+.content_view {
+  width: 980px;
+  margin: 0 auto;
+}
+/* topbar_sprite */
+.topbar_sprite {
+  display: inline-block;
+  background-image: url(../image/topbar.png);
+}
+.tapbar_icon_hot {
+  background-position: -192px 0;
+  width: 26px;
+  height: 13px;
+}
+
+/* btn_sprite */
+.btn_02 {
+  display: inline-block;
+  background: url(../image/button2.png);
+}
+.btn_type_01_sup {
+  background-position: right -100px;
+  padding-right: 5px;
+  height: 31px;
+  line-height: 31px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.btn_type_01_sup>i {
+  display: block;
+  background-position: 0 -59px;
+  padding-left: 3px;
+}
+
+.btn_type_01_sup:hover {
+  background-position: right -182px;
+}
+.btn_type_01_sup>i:hover {
+  background-position: 0 -141px;
+}
+
+
+.right_item li .item{
+  display: flex;
+  /* 设置align-items高度会被压缩 */
+  /* align-items: center; */
+}
+.right_item .item .info {
+  /* 占据余下宽度 */
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 10px;
+}
+.right_item .item .info .singer {
+  color: #000;
+  font-size: 12px;
+}
+.right_item .item .info .desc {
+  color: #666;
+  /* 多于文字...表示 */
+  /* 解决不会显示...,在flex:1的地方加上overflow:hidden */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+
+/* recommend-section:icon_sprite */
+.iconall_sprite {
+  display: inline-block;
+  background-image: url(../image/iconall.png);
+}
+
+.iconall_sprite_headset {
+  background-position: 0 -24px;
+  width: 14px;
+  height: 11px;
+}
+.iconall_sprite_video {
+  background-position: 0 0;
+  width: 16px;
+  height: 17px;
+}
+
+.icon_sprite {
+  display: inline-block;
+  background-image: url(../image/icon.png);
+}
+.icon_sprite_dtjm {
+  background-position: -31px -658px;
+  width: 35px;
+  height: 15px;
+}
+/* index */
+.index_sprite {
+  display: inline-block;
+  background: url(../image/index.png);
+}
+/* coverall */
+.coverall_sprite {
+  background: url(../image/coverall.png);
+}

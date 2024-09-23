@@ -1,0 +1,28 @@
+body,div,h1,h2,h3,ol,ul,li,p,dl,dt,dd {
+  margin: 0;
+  padding: 0;
+}
+ul,li,ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #ccc;
+  outline: none;
+}
+input {
+  outline: none;
+  border: none;
+}
+/* 块级元素嵌套img(行内替换元素/行内非替换元素)基线对齐(vertical-align: baseline) */
+img{
+  /* 方法四种 */
+  vertical-align: top;
+  /* vertical-align: bottom; */
+  /* vertical-align: middle; */
+  /* display: block; */
+}
+
+i {
+  font-style: normal;
+}

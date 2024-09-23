@@ -1,0 +1,80 @@
+.main .area-right {
+  width: 250px;
+}
+.area-right .user-login {
+  width: 250px;
+  height: 126px;
+  background: url(../image/index.png) 0 0;
+}
+.area-right .user-login .desc {
+  width: 205px;
+  margin: 0 auto;
+  padding:  16px 0;
+  color: #666;
+  line-height: 22px;
+}
+.area-right .user-login .btn {
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+  height: 31px;
+  line-height: 31px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 1px 0 #8a060b;
+  background: url(../image/index.png) 0 -195px;
+}
+.area-right .user-login .btn:hover {
+  background-position: -110px -195px;
+}
+.area-right .settle-singer {
+  padding: 20px;
+}
+.area-right .settle-singer .list {
+  padding: 6px 0;
+}
+.area-right .settle-singer .item {
+  height: 62px;
+  margin-top: 14px;
+  background: #fafafa;
+}
+.area-right .settle-singer .item:hover {
+  background-color: #f4f4f4;
+}
+.settle-singer .item .info {
+  border: 1px solid #e9e9e9;
+  border-left: none;
+}
+.settle-singer .item .info .singer {
+  font-size: 14px;
+  font-weight: 700;
+}
+.settle-singer .apply {
+  width: 210px;
+  height: 31px;
+  border-radius: 4px;
+  margin-top: 14px;
+}
+.settle-singer .apply i {
+  color: #333;
+  font-style: normal;
+  font-weight: 700;
+}
+.hot-anthor {
+  padding: 0 20px;
+}
+.hot-anthor .list {
+  padding: 20px 0;
+}
+.hot-anthor .list .item {
+  height: 50px;
+  line-height: 21px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+}
+.hot-anthor .list .item .info {
+  height: 40px;
+}
+.hot-anthor .list .item .info .singer:hover {
+  text-decoration: underline;
+}

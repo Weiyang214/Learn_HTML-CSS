@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新闻列表</title>
+  <style>
+    /* 重置 */
+    body,ul,li {
+      margin: 0;
+      padding: 0;
+    }
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+    ul,li {
+      list-style: none;
+    }
+    /* 火热图标 */
+    h2::before {
+      content: "";
+      display: inline-block;
+      background: url(./image/火热.png) no-repeat 50%;
+      background-size: contain;
+      width: 24px;
+      height: 22px;
+      margin:0 5px;
+      position: relative;
+      top: 2px;
+    }
+
+    /* 整体 */
+    ul>li {
+      margin-top: 30px;
+    }
+    ul>li>a {
+      display: inline-block;
+    }
+    ul>li>a:hover {
+      color: #f04142;
+    }
+
+    /* 局部 */
+    ul>li .ranking {
+      font-size: 20px;
+      display: inline-block;
+      margin-right: 3px;
+      width: 24px;
+      height: 24px;
+
+      text-align: center;
+      line-height: 24px;
+
+      font-weight: bold;
+      color: #888;
+    }
+    /* 前三个数字样式 */
+    ul>li:nth-child(1) .ranking {
+      color: #ab2e2e;
+    }
+    ul>li:nth-child(2) .ranking {
+      color: #f04142;
+    }
+    ul>li:nth-child(3) .ranking {
+      color: #ff9a03;
+    }
+
+
+    ul>li .content {
+      font-size: 16px;
+      display: inline;
+    }
+
+    /* 热和新的图标 */
+    ul>li .icon {
+      position: relative;
+      top: 3px;
+
+
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+    }
+    ul>li .new {
+      background-image: url(https://lf3-cdn2-tos.bytescm.com/toutiao/toutiao_web_pc/svgs/new.b7973b24.svg);
+    }
+    ul>li .hot {
+      background-image: url(https://lf3-cdn2-tos.bytescm.com/toutiao/toutiao_web_pc/svgs/hot.92a15c5e.svg);
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h2>头条热榜</h2>
+    <ul>
+      <li class="item">
+       <a href="https://www.toutiao.com/article/7224326682272989729/?log_from=a224a054ea49c_1682076005839">
+          <span class="ranking">1</span>
+          <div class="content">以学铸魂 站稳人民立场</div>
+          <i class="icon"></i>
+        </a>
+      </li>
+      <li class="item">
+        <a href="https://www.toutiao.com/trending/7223924681164718080/?rank=1&log_from=f8e3f38b5ffe_1682076085427">
+          <span class="ranking">2</span>
+          <div class="content">史诗级公关灾难</div>
+          <i class="icon"></i>
+        </a>
+      </li>
+      <li class="item">
+        <a href="https://www.toutiao.com/trending/7224420059438022667/?rank=2&log_from=9bc4e4c9bc2b_1682076101082">
+          <span class="ranking">3</span>
+          <div class="content">宝马冰淇淋事件两名涉事女员工离职</div>
+          <i class="icon hot"></i>
+        </a>
+      </li>
+      <li class="item">
+        <a href="https://www.toutiao.com/article/7224299902770414140">
+          <span class="ranking">4</span>
+          <div class="content">信心聚起人心 客商纷至沓来</div>
+          <i class="icon hot"></i>
+        </a>
+      </li>
+       <li class="item">
+        <a href="https://www.toutiao.com/article/7224299902770414140">
+          <span class="ranking">5</span>
+          <div class="content">信心聚起人心 客商纷至沓来</div>
+          <i class="icon new"></i>
+        </a>
+      </li>
+      <li class="item">  
+        <a href="https://www.toutiao.com/article/7224299902770414140">
+          <span class="ranking">6</span>
+          <div class="content">信心聚起人心 客商纷至沓来</div>
+          <i class="icon"></i>
+        </a>
+      </li>
+      <li class="item">
+       <a href="https://www.toutiao.com/article/7224299902770414140">
+          <span class="ranking">7</span>
+          <div class="content">信心聚起人心 客商纷至沓来</div>
+          <i class="icon"></i>
+        </a>
+      </li>
+      <li class="item">
+        <a href="https://www.toutiao.com/article/7224299902770414140">
+          <span class="ranking">8</span>
+          <div class="content">信心聚起人心 客商纷至沓来</div>
+          <i class="icon"></i>
+        </a>
+      </li>
+      <li class="item">
+        <a href="https://www.toutiao.com/article/7224299902770414140">
+          <span class="ranking">9</span>
+          <div class="content">信心聚起人心 客商纷至沓来</div>
+          <i class="icon"></i>
+        </a>
+      </li>
+      <li class="item">
+        <a href="https://www.toutiao.com/article/7224299902770414140">
+          <span class="ranking">10</span>
+          <div class="content">信心聚起人心 客商纷至沓来</div>
+          <i class="icon new"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+/* .header_type_01 */
+.header_type_01 {
+  display: flex;
+  justify-content: space-between; 
+  padding-bottom: 5px;
+  border-bottom: 2px solid #ccc;
+  font-size: 12px;
+}
+.header_type_01 .title {
+  font-size: 12px;
+  color: #333;
+}
+.header_type_01 .more {
+  color: #666;
+}
+
+
+/* .header_type_02 */
+.header_type_02 {
+  position: relative;
+  display: flex;
+  /* 左右两侧 */
+  justify-content: space-between;
+  align-items: center;  
+  /* 底部对齐 */
+  height: 33px;
+  padding: 0 10px 0 34px;
+  border-bottom: 2px solid #c10d0c;
+  background: url(../image/index.png) no-repeat -225px -154px;
+
+}
+/* 伪元素 */
+.header_type_02::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  width: 12px;
+  height: 12px;
+  background: url(../image/index.png) no-repeat 0 -240px;
+}
+.header_type_02 .area-hleft {
+  display: flex;
+  align-items: center ;
+
+}
+.header_type_02 .area-hleft .title {
+  font-weight: normal;
+  font-size: 20px;
+  padding-bottom: 3px;
+  font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+  color: #333;
+}
+.header_type_02 .area-hleft .keyword {
+  display: flex;
+  padding-left: 10px;
+}
+.header_type_02 .area-hleft .keyword li a {
+  color: #666;
+}
+.header_type_02 .area-hleft .keyword .line {
+  color: #ccc;
+  margin: 0 12px;
+}
+.header_type_02 .area-hright a {
+  color: #666;
+  padding-right: 15px;
+}
+.header_type_02 .area-hleft .keyword a:hover,.area-hright a:hover {
+  text-decoration: underline;
+}

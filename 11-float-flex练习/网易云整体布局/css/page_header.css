@@ -1,0 +1,144 @@
+/* header.css */
+.header > .top {
+  height: 70px;
+  background-color: #242424;
+  border-bottom: 1px solid #000;
+  box-sizing: border-box;
+}
+.top .topbar {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  line-height: 70px;
+}
+.top .topbar .top-left {
+  display: flex;
+}
+.top .topbar .top-left .logo {
+  background: url('../image/topbar.png') no-repeat 0 0;
+}
+.top .topbar .top-left .logo a {
+  display: block;
+  width: 157px;
+  height: 69px;
+  padding-right: 20px;
+
+  text-indent: -9999px;
+}
+.top .topbar .top-left ul {
+  display: flex; 
+}
+.top .topbar .top-left ul li {
+  position: relative;
+}
+.top .topbar ul li a{
+  display: block;
+  padding: 0 19px;
+  color: #ccc;
+  font-size: 14px; 
+}
+.top .topbar ul li a:hover,.top .topbar ul a.active {
+  color: #fff;
+  background-color: #000;
+}
+.top .topbar ul li a.active::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 7px;
+  background: url('../image/topbar.png') no-repeat -226px 0;
+  bottom: -1px;
+  /* 居中 */
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.top .topbar ul li i.hot-icon {
+  position: absolute;
+  top: 20px;
+  right: -20px;
+}
+.top .topbar .top-right {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+.top .topbar .top-right .search {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 158px;
+  height: 32px;
+  box-sizing: border-box;
+  padding-right: 10px;
+  border-radius: 30px;
+  background: #fff url(../image/topbar.png) 0 -99px;
+}
+.top .topbar .top-right .search input {
+  width: 110px;
+  margin-left: 31px;
+  font-size: 12px;
+}
+
+
+.top .topbar .top-right .search input::-webkit-input-placeholder {
+  color: #9b9b9b;
+}
+
+.top .topbar .top-right .anthor a {
+  color: #ccc;
+  padding: 9px 16px;
+  box-sizing: border-box;
+  border: 1px solid #4f4f4f;
+  border-radius: 20px;
+  margin-right: 20px;
+}
+.top .topbar .top-right .anthor a:hover {
+  color: #fff;
+  border-color: #fff;
+}
+.top .topbar .top-right .login {
+  height: 69px;
+  color: #787878;
+}
+.top .topbar .top-right .login:hover a {
+  color: #ccc;
+}
+.top .topbar .top-right .login a:hover {
+  text-decoration: underline;
+  color: #787878;
+}
+
+.topnav {
+  height: 35px;
+  line-height: 35px;
+  box-sizing: border-box;
+  background-color: #c20c0c;
+  border-bottom: 1px solid #a40011;
+}
+.topnav .nav {
+  box-sizing: border-box;
+  padding-left: 180px;
+}
+.topnav .nav ul {
+  display: flex;
+  color: #fff;
+}
+.topnav .nav ul li a {
+  /* 光标手指占据一整行,flex,默认值拉伸,行内非替换元素有效 */
+  display: block;
+}
+.topnav .nav ul span {
+  display: inline-block;
+  padding: 0 13px;
+  margin: 7px 17px 0;
+  height: 20px;
+  line-height: 21px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  color: #fff;
+}
+ .topnav .nav li:hover span, .topnav .nav li.active span {
+  background-color: #3333144d;
+  border-radius: 20px;
+}

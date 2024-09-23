@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>button</title>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <style>
+    body {
+      margin: 50px;
+    }
+    .apply {
+      display: inline-block;
+      width: 190px;
+      height: 31px;
+      line-height: 31px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 700;
+      color: #000;
+      background: url(./image/button2.png) right -100px;
+      padding-right: 5px;
+      /* border-radius: 4px; */
+    }
+    .apply i {
+      display: block;
+      height: 31px;
+      background: url(./image/button2.png) 0 -59px;
+      padding-left: 3px;
+    }
+
+    /* 收藏按钮 */
+    .btn_type_favor_sup {
+      background-position: right -1020px;
+      padding-right: 5px;
+    }
+    .btn_type_favor_sup>i {
+      background-position: 0 -977px;
+      padding-left: 28px;
+      padding-right: 5px;
+      color: #525151;
+    }
+  </style>
+</head>
+<body>
+  <a href="#" class="apply">
+    <i>申请成为网易音乐人</i>
+  </a>
+
+  <!-- 收藏按钮 -->
+  <a class="btn_02 favor btn_type_01_sup btn_type_favor_sup" href="#">
+    <i class="btn_02">(123458984567)</i>
+  </a>
+</body>
+</html>
